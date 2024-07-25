@@ -1,4 +1,5 @@
 deployAs:
+  - name: eventSample
     applicationType: event
     endpoint: /event
     scripts:
