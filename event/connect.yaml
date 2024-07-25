@@ -1,0 +1,25 @@
+deployAs:
+    applicationType: event
+    endpoint: /event
+    scripts:
+      postDeploy: npm install && npm run connector:post-deploy
+      preUndeploy: npm install && npm run connector:pre-undeploy
+    configuration:
+      standardConfiguration:
+        - key: australia-southeast1.gcp
+          description: commercetools Composable Commerce API region
+          required: true
+          default: "europe-west1.gcp"
+      securedConfiguration:
+        - key: truecorp_omni_platform_dev
+          description: commercetools Composable Commerce project key
+          required: true
+        - key: 6F-XaUKqi32_6gFWtv7RVgnW
+          description: commercetools Composable Commerce client ID
+          required: true
+        - key: 9b6_iY0krZH6UW6DZbRvtldKzqzfE-K-
+          description: commercetools Composable Commerce client secret
+          required: true
+        - key: manage_subscriptions:truecorp_omni_platform_dev manage_connectors_deployments:truecorp_omni_platform_dev manage_types:truecorp_omni_platform_dev manage_payments:truecorp_omni_platform_dev manage_extensions:truecorp_omni_platform_dev manage_shipping_methods:truecorp_omni_platform_dev manage_products:truecorp_omni_platform_dev view_messages:truecorp_omni_platform_dev manage_connectors:truecorp_omni_platform_dev manage_tax_categories:truecorp_omni_platform_dev manage_standalone_prices:truecorp_omni_platform_dev manage_orders:truecorp_omni_platform_dev manage_customers:truecorp_omni_platform_dev
+          description: commercetools Composable Commerce client scope
+          required: true
